@@ -1,0 +1,1 @@
+Neste projeto pretendo aplicar meus conhecimentos em HTML, SASS e JavaScript. Sempre que possível quero estar melhorando esse projeto conforme aumento minhas habilidades em cada tecnologia.
