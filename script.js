@@ -1,11 +1,15 @@
-const relogio = document.querySelector('#relogio');
+const cronometro = document.querySelector('#cronometro');
 
-let horas = 0;
-let minutos = 0;
+let horas    = 0;
+let minutos  = 0;
 let segundos = 0;
-let intervalo;
+let intervalo = null;
 
 function iniciar() {
+    if(intervalo !== null) { 
+        return;
+    };
+
     intervalo = setInterval(() => {
         segundos++;
     
@@ -19,7 +23,7 @@ function iniciar() {
             };
         };
     
-        relogio.innerHTML = horas.toString().padStart(2, '0') + ':' + 
+        cronometro.innerHTML = horas.toString().padStart(2, '0') + ':' + 
                             minutos.toString().padStart(2, '0') + ':' +
                             segundos.toString().padStart(2, '0');
     }, 1000);
@@ -27,4 +31,15 @@ function iniciar() {
 
 function pausar() {
     clearInterval(intervalo);
+    intervalo = null;
+}
+
+function voltar() {
+    clearInterval(intervalo);
+    intervalo = null;
+    horas = 0;
+    minutos = 0;
+    segundos = 0;
+
+    cronometro.innerHTML = '00:00:00';
 }
