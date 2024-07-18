@@ -12,6 +12,24 @@ body {
 
 main {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#cronometro {
+    font-family: Arial;
+    font-size: 30px;
+}
+
+.botoes {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+#btnIniciar, #btnPausar, #btnVoltar {
+    margin: 5px;
+    font-family: Arial;
+    font-size: 20px;
 }
